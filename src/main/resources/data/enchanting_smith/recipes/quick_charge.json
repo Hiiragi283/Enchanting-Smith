@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "CROSSBOW",
+  "upgrade": {
+    "tag": "minecraft:redstone_block"
+  },
+  "enchantment": "minecraft:quick_charge"
+}

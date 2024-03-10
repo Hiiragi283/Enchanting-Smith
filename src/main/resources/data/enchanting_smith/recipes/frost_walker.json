@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "ARMOR_FEET",
+  "upgrade": {
+    "item": "minecraft:blue_ice"
+  },
+  "enchantment": "minecraft:frost_walker"
+}

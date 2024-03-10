@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "BOW",
+  "upgrade": {
+    "tag": "minecraft:piston"
+  },
+  "enchantment": "minecraft:punch"
+}

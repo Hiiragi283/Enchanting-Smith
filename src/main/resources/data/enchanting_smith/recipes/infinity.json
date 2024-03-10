@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "BOW",
+  "upgrade": {
+    "tag": "minecraft:end_crystal"
+  },
+  "enchantment": "minecraft:infinity"
+}

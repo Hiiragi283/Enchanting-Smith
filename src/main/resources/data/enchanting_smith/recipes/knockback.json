@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "WEAPON",
+  "upgrade": {
+    "item": "minecraft:piston"
+  },
+  "enchantment": "minecraft:knockback"
+}
