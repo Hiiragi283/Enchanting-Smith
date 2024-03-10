@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "BREAKABLE",
+  "upgrade": {
+    "tag": "minecraft:diamond"
+  },
+  "enchantment": "minecraft:unbreaking"
+}

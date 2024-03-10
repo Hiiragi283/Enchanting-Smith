@@ -1,0 +1,25 @@
+[versions]
+forge = "36.2.34"
+forge-gradle = "6.+"
+forge-range = "[36,)"
+loader-range = "[36,)"
+mappings-channel = "official"
+mappings-version = "1.16.5"
+mc = "1.16.5"
+mc-forge = "1.16.5-36.2.34"
+mc-range = "[1.16,1.17)"
+mod-authors = "Hiiragi283"
+mod-description = "Add new Smithing Recipe format applying enchantment"
+mod-group = "io.github.hiiragi283.enchsmith"
+mod-id = "enchanting_smith"
+mod-license = "MPL-2.0"
+mod-name = "Enchanting Smith"
+mod-version = "1.0.0+forge1.16.5"
+
+[libraries]
+minecraft = { group = "net.minecraftforge", name = "forge", version.ref = "mc-forge" }
+
+[bundles]
+
+[plugins]
+forge-gradle = { id = "net.minecraftforge.gradle", version.ref = "forge-gradle" }

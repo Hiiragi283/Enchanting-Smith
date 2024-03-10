@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "ARMOR",
+  "upgrade": {
+    "item": "minecraft:shield"
+  },
+  "enchantment": "minecraft:projectile_protection"
+}

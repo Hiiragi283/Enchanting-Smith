@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "DIGGER",
+  "upgrade": {
+    "tag": "minecraft:redstone_block"
+  },
+  "enchantment": "minecraft:efficiency"
+}

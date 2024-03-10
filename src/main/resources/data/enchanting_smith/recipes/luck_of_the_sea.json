@@ -1,0 +1,8 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "target": "FISHING_ROD",
+  "upgrade": {
+    "item": "minecraft:lapis_block"
+  },
+  "enchantment": "minecraft:luck_of_the_sea"
+}
