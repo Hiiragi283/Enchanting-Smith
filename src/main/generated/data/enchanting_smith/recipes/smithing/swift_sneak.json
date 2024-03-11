@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:swift_sneak",
+  "upgrade": {
+    "item": "minecraft:sugar"
+  }
+}

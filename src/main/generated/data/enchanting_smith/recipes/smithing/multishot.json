@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:multishot",
+  "upgrade": {
+    "item": "minecraft:crossbow"
+  }
+}

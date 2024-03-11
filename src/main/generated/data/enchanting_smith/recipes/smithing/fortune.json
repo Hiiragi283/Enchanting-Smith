@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:fortune",
+  "upgrade": {
+    "item": "minecraft:lapis_block"
+  }
+}

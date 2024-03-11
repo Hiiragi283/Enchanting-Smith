@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:feather_falling",
+  "upgrade": {
+    "item": "minecraft:feather"
+  }
+}

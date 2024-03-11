@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:lure",
+  "upgrade": {
+    "item": "minecraft:redstone_block"
+  }
+}

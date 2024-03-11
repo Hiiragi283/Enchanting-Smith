@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:blast_protection",
+  "upgrade": {
+    "item": "minecraft:obsidian"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:unbreaking",
+  "upgrade": {
+    "item": "minecraft:diamond"
+  }
+}

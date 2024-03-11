@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:riptide",
+  "upgrade": {
+    "item": "minecraft:firework_rocket"
+  }
+}

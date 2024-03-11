@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:depth_strider",
+  "upgrade": {
+    "item": "minecraft:nautilus_shell"
+  }
+}

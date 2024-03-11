@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:luck_of_the_sea",
+  "upgrade": {
+    "item": "minecraft:lapis_block"
+  }
+}

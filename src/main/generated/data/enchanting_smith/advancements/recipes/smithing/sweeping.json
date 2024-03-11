@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enchanting_smith:smithing/sweeping"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:signs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_upgrade",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enchanting_smith:smithing/sweeping"
+    ]
+  },
+  "sends_telemetry_event": false
+}

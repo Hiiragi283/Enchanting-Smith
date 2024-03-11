@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "enchanting_smith",
+  "version": "${version}",
+  "name": "Enchanting Smith",
+  "description": "Add new Smithing Recipe format applying enchantment",
+  "authors": [
+    "Hiiragi283"
+  ],
+  "contributors": [],
+  "contact": {
+    "issues": "https://github.com/Hiiragi283/Enchanting-Smith/issues",
+    "sources": "https://github.com/Hiiragi283/Enchanting-Smith"
+  },
+  "license": [
+    "MPL-2.0"
+  ],
+  "icon": "assets/enchanting_smith/textures/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "io.github.hiiragi283.enchsmith.EnchantingSmith"
+      }
+    ],
+    "rei_client": [
+      {
+        "value": "io.github.hiiragi283.enchsmith.ESReiPlugin"
+      }
+    ],
+    "fabric-datagen": [
+      {
+        "value": "io.github.hiiragi283.enchsmith.datagen.EnchantingSmithDatagen"
+      }
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.20.1"
+  }
+}

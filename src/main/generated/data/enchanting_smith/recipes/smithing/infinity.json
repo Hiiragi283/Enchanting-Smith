@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:infinity",
+  "upgrade": {
+    "item": "minecraft:end_crystal"
+  }
+}

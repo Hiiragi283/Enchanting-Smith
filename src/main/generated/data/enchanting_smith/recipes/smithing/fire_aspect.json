@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:fire_aspect",
+  "upgrade": {
+    "item": "minecraft:flint_and_steel"
+  }
+}

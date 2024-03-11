@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enchanting_smith:smithing/riptide"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:firework_rocket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_upgrade",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enchanting_smith:smithing/riptide"
+    ]
+  },
+  "sends_telemetry_event": false
+}

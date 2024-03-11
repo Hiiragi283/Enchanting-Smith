@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:aqua_affinity",
+  "upgrade": {
+    "item": "minecraft:heart_of_the_sea"
+  }
+}

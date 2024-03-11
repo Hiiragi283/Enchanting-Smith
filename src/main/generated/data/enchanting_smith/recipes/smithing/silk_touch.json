@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:silk_touch",
+  "upgrade": {
+    "item": "minecraft:phantom_membrane"
+  }
+}

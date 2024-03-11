@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:soul_speed",
+  "upgrade": {
+    "item": "minecraft:soul_soil"
+  }
+}

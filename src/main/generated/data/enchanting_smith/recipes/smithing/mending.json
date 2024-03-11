@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:mending",
+  "upgrade": {
+    "item": "minecraft:nether_star"
+  }
+}

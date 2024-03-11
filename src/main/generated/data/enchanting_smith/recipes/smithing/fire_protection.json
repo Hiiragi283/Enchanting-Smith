@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:fire_protection",
+  "upgrade": {
+    "item": "minecraft:nether_bricks"
+  }
+}

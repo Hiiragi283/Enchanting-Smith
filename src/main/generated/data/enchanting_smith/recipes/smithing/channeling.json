@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:channeling",
+  "upgrade": {
+    "item": "minecraft:lightning_rod"
+  }
+}

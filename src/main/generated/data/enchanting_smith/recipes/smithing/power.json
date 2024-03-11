@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:power",
+  "upgrade": {
+    "item": "minecraft:blaze_powder"
+  }
+}

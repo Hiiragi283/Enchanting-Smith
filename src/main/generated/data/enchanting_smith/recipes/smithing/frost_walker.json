@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "enchantment": "minecraft:frost_walker",
+  "upgrade": {
+    "item": "minecraft:blue_ice"
+  }
+}
