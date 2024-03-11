@@ -24,9 +24,6 @@ import java.util.Objects;
 import java.util.stream.StreamSupport;
 
 public final class UpgradeSmithingRecipe extends SmithingRecipe {
-
-    @NotNull
-    public final EnchantmentTarget target;
     @NotNull
     public final Ingredient upgrade;
     @NotNull
@@ -39,9 +36,8 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
                 .map(Item::getDefaultStack));
     }
 
-    public UpgradeSmithingRecipe(@NotNull Identifier id, @NotNull EnchantmentTarget target, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
-        super(id, convertInput(target), upgrade, ItemStack.EMPTY);
-        this.target = target;
+    public UpgradeSmithingRecipe(@NotNull Identifier id, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
+        super(id, convertInput(enchantment.type), upgrade, ItemStack.EMPTY);
         this.upgrade = upgrade;
         this.enchantment = enchantment;
     }
@@ -49,7 +45,7 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
     // Do not over max enchant level
     @Override
     public boolean matches(@NotNull Inventory inventory, @NotNull World world) {
-        return target.isAcceptableItem(inventory.getStack(0).getItem())
+        return enchantment.type.isAcceptableItem(inventory.getStack(0).getItem())
                 && upgrade.test(inventory.getStack(1))
                 && EnchantmentHelper.getLevel(enchantment, inventory.getStack(0)) < enchantment.getMaxLevel();
     }
@@ -80,32 +76,29 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
         @NotNull
         @Override
         public UpgradeSmithingRecipe read(@NotNull Identifier id, @NotNull JsonObject json) {
-            EnchantmentTarget target = EnchantmentTarget.valueOf(JsonHelper.getString(json, "target"));
             Ingredient upgrade = Ingredient.fromJson(JsonHelper.getObject(json, "upgrade"));
             Identifier enchantmentId = new Identifier(JsonHelper.getString(json, "enchantment"));
             if (!Registry.ENCHANTMENT.containsId(enchantmentId)) {
                 throw new IllegalStateException("Could not found enchantment; " + enchantmentId);
             }
             Enchantment enchantment = Registry.ENCHANTMENT.get(enchantmentId);
-            return new UpgradeSmithingRecipe(id, target, upgrade, Objects.requireNonNull(enchantment));
+            return new UpgradeSmithingRecipe(id, upgrade, Objects.requireNonNull(enchantment));
         }
 
         @NotNull
         @Override
         public UpgradeSmithingRecipe read(@NotNull Identifier id, @NotNull PacketByteBuf buf) {
-            EnchantmentTarget target = EnchantmentTarget.valueOf(buf.readString());
             Ingredient upgrade = Ingredient.fromPacket(buf);
             int enchantmentId = buf.readVarInt();
             Enchantment enchantment = Registry.ENCHANTMENT.get(enchantmentId);
             if (enchantment == null) {
                 throw new IllegalStateException("Could not found enchantment; " + enchantmentId);
             }
-            return new UpgradeSmithingRecipe(id, target, upgrade, enchantment);
+            return new UpgradeSmithingRecipe(id, upgrade, enchantment);
         }
 
         @Override
         public void write(@NotNull PacketByteBuf buf, @NotNull UpgradeSmithingRecipe recipe) {
-            buf.writeString(recipe.target.name());
             recipe.upgrade.write(buf);
             buf.writeVarInt(Registry.ENCHANTMENT.getRawId(recipe.enchantment));
         }

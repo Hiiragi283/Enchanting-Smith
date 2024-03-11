@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "WEAPON",
   "upgrade": {
     "item": "minecraft:pufferfish"
   },

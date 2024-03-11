@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "BOW",
   "upgrade": {
     "tag": "minecraft:blaze_powder"
   },

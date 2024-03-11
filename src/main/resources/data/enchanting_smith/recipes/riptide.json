@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "TRIDENT",
   "upgrade": {
     "tag": "minecraft:firework_rocket"
   },

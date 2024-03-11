@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "DIGGER",
   "upgrade": {
     "tag": "minecraft:phantom_membrane"
   },

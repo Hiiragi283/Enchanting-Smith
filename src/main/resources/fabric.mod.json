@@ -20,7 +20,6 @@
   "entrypoints": {
     "main": [
       {
-        "adapter": "kotlin",
         "value": "io.github.hiiragi283.enchsmith.EnchantingSmith"
       }
     ]

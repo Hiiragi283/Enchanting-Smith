@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "ARMOR_HEAD",
   "upgrade": {
     "item": "minecraft:heart_of_the_sea"
   },

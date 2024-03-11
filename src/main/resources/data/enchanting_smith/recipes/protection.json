@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "ARMOR",
   "upgrade": {
     "item": "minecraft:iron_block"
   },

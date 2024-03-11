@@ -8,7 +8,6 @@ import net.minecraft.advancement.criterion.CriterionConditions;
 import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.util.Identifier;
@@ -18,16 +17,12 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
 public final class UpgradeSmithingRecipeJsonFactory {
-
-    @NotNull
-    private final EnchantmentTarget target;
     @NotNull
     private final Ingredient upgrade;
     @NotNull
     private final Enchantment enchantment;
 
-    public UpgradeSmithingRecipeJsonFactory(@NotNull EnchantmentTarget target, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
-        this.target = target;
+    public UpgradeSmithingRecipeJsonFactory(@NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
         this.upgrade = upgrade;
         this.enchantment = enchantment;
     }
@@ -46,15 +41,12 @@ public final class UpgradeSmithingRecipeJsonFactory {
                 .criterion("has_the_recipe", RecipeUnlockedCriterion.create(recipeId))
                 .rewards(AdvancementRewards.Builder.recipe(recipeId))
                 .criteriaMerger(CriterionMerger.OR);
-        exporter.accept(new Provider(recipeId, target, upgrade, enchantment, builder.toJson()));
+        exporter.accept(new Provider(recipeId, upgrade, enchantment, builder.toJson()));
     }
 
     public static final class Provider implements RecipeJsonProvider {
-
         @NotNull
         private final Identifier recipeId;
-        @NotNull
-        private final EnchantmentTarget target;
         @NotNull
         private final Ingredient upgrade;
         @NotNull
@@ -64,9 +56,8 @@ public final class UpgradeSmithingRecipeJsonFactory {
         @NotNull
         private final Identifier advancementId;
 
-        public Provider(@NotNull Identifier recipeId, @NotNull EnchantmentTarget target, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment, @NotNull JsonObject advancement) {
+        public Provider(@NotNull Identifier recipeId, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment, @NotNull JsonObject advancement) {
             this.recipeId = recipeId;
-            this.target = target;
             this.upgrade = upgrade;
             this.enchantment = enchantment;
             this.advancement = advancement;
@@ -75,7 +66,6 @@ public final class UpgradeSmithingRecipeJsonFactory {
 
         @Override
         public void serialize(@NotNull JsonObject json) {
-            json.addProperty("target", target.name());
             json.add("upgrade", upgrade.toJson());
             Identifier enchantmentId = Registry.ENCHANTMENT.getId(enchantment);
             String enchantmentName = enchantmentId == null ? "null" : enchantmentId.toString();

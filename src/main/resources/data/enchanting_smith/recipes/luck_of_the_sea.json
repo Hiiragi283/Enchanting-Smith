@@ -1,6 +1,5 @@
 {
   "type": "enchanting_smith:upgrade",
-  "target": "FISHING_ROD",
   "upgrade": {
     "item": "minecraft:lapis_block"
   },
