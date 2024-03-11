@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:lead"
+    "item": "minecraft:lead"
   },
   "enchantment": "minecraft:loyalty"
 }

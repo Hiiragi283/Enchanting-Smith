@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:blaze_rod"
+    "item": "minecraft:blaze_rod"
   },
   "enchantment": "minecraft:channeling"
 }

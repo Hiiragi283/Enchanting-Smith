@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:nether_star"
+    "item": "minecraft:nether_star"
   },
   "enchantment": "minecraft:mending"
 }

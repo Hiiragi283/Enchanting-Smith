@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:prismarine_shard"
+    "item": "minecraft:prismarine_shard"
   },
   "enchantment": "minecraft:impaling"
 }

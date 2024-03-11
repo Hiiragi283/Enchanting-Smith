@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "item": "minecraft:glowstone_block"
+    "item": "minecraft:glowstone"
   },
   "enchantment": "minecraft:smite"
 }

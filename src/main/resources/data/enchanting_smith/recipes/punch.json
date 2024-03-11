@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:piston"
+    "item": "minecraft:piston"
   },
   "enchantment": "minecraft:punch"
 }

@@ -1,7 +1,7 @@
 {
   "type": "enchanting_smith:upgrade",
   "upgrade": {
-    "tag": "minecraft:fire_charge"
+    "item": "minecraft:fire_charge"
   },
   "enchantment": "minecraft:flame"
 }
