@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "DIGGER",
-  "upgrade": {
-    "tag": "minecraft:lapis_block"
-  },
-  "enchantment": "minecraft:fortune"
-}

@@ -13,7 +13,7 @@ mod-description = "Add new Smithing Recipe format applying enchantment"
 mod-group = "io.github.hiiragi283.enchsmith"
 mod-id = "enchanting_smith"
 mod-license = "MPL-2.0"
-mod-name = "Enchanting Smith"
+mod-name = "Enchanting-Smith"
 mod-version = "1.0.0+forge1.16.5"
 
 [libraries]

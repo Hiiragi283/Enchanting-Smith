@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "upgrade": {
+    "item": "minecraft:arrow"
+  },
+  "enchantment": "minecraft:piercing"
+}

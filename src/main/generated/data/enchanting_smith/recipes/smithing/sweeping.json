@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "upgrade": {
+    "tag": "minecraft:signs"
+  },
+  "enchantment": "minecraft:sweeping"
+}

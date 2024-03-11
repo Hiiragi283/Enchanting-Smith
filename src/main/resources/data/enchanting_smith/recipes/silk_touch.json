@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "DIGGER",
-  "upgrade": {
-    "tag": "minecraft:phantom_membrane"
-  },
-  "enchantment": "minecraft:silk_touch"
-}

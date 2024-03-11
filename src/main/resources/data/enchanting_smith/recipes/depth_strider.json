@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "ARMOR_FEET",
-  "upgrade": {
-    "item": "minecraft:nautilus_shell"
-  },
-  "enchantment": "minecraft:depth_strider"
-}

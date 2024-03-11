@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "enchanting_smith:smithing/lure"
+    ]
+  },
+  "criteria": {
+    "has_upgrade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:redstone_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "enchanting_smith:smithing/lure"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_upgrade",
+      "has_the_recipe"
+    ]
+  ]
+}

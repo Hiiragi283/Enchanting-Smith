@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "BREAKABLE",
-  "upgrade": {
-    "tag": "minecraft:nether_star"
-  },
-  "enchantment": "minecraft:mending"
-}

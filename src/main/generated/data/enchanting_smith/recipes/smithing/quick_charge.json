@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "upgrade": {
+    "item": "minecraft:redstone_block"
+  },
+  "enchantment": "minecraft:quick_charge"
+}

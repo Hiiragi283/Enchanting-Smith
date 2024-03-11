@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "WEAPON",
-  "upgrade": {
-    "item": "minecraft:lapis_block"
-  },
-  "enchantment": "minecraft:looting"
-}

@@ -9,6 +9,15 @@ group = libs.versions.mod.group.get()
 version = libs.versions.mod.version.get()
 base.archivesName = libs.versions.mod.name.get()
 
+
+sourceSets {
+    main {
+        resources {
+            srcDir("src/main/generated")
+        }
+    }
+}
+
 println(
     "Java: ${System.getProperty("java.version")}, " +
             "JVM: ${System.getProperty("java.vm.version")} (${System.getProperty("java.vendor")}), " +
@@ -39,6 +48,17 @@ minecraft {
 
         create("server") {
             args("--nogui")
+        }
+
+        create("data") {
+            property("fml.earlyprogresswindow", "false")
+            workingDirectory(project.file("build/datagen"))
+            args(
+                "--mod", libs.versions.mod.id.get(),
+                "--all",
+                "--existing", "${file("src/main/resources")}",
+                "--output", "${file("src/main/generated")}"
+            )
         }
     }
 }
@@ -75,13 +95,14 @@ tasks {
                 put("project", project)
             })
         }
+        exclude(".cache")
     }
 
     jar.configure {
         from("LICENSE") {
             rename { "${it}_${project.base.archivesName.get()}" }
         }
-
+        exclude("**/datagen/**")
         manifest {
             attributes(
                 hashMapOf(

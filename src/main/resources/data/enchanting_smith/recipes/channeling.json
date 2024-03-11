@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "TRIDENT",
-  "upgrade": {
-    "tag": "minecraft:blaze_rod"
-  },
-  "enchantment": "minecraft:channeling"
-}

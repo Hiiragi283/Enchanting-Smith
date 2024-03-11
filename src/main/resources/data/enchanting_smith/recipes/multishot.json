@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "CROSSBOW",
-  "upgrade": {
-    "tag": "minecraft:crossbow"
-  },
-  "enchantment": "minecraft:multishot"
-}

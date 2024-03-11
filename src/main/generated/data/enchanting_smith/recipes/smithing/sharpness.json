@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "upgrade": {
+    "item": "minecraft:quartz_block"
+  },
+  "enchantment": "minecraft:sharpness"
+}

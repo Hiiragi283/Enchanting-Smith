@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "TRIDENT",
-  "upgrade": {
-    "tag": "minecraft:prismarine_shard"
-  },
-  "enchantment": "minecraft:impaling"
-}

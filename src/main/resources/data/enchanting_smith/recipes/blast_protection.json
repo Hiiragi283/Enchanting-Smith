@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "ARMOR",
-  "upgrade": {
-    "item": "minecraft:obsidian"
-  },
-  "enchantment": "minecraft:blast_protection"
-}

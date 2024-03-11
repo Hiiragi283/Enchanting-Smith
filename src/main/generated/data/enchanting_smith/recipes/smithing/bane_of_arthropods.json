@@ -1,0 +1,7 @@
+{
+  "type": "enchanting_smith:upgrade",
+  "upgrade": {
+    "item": "minecraft:pufferfish"
+  },
+  "enchantment": "minecraft:bane_of_arthropods"
+}

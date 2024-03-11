@@ -1,8 +1,0 @@
-{
-  "type": "enchanting_smith:upgrade",
-  "target": "ARMOR",
-  "upgrade": {
-    "item": "minecraft:nether_bricks"
-  },
-  "enchantment": "minecraft:fire_protection"
-}

@@ -24,9 +24,6 @@ import java.util.Objects;
 import java.util.stream.StreamSupport;
 
 public final class UpgradeSmithingRecipe extends SmithingRecipe {
-
-    @NotNull
-    public final EnchantmentType target;
     @NotNull
     public final Ingredient upgrade;
     @NotNull
@@ -39,9 +36,8 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
                 .map(Item::getDefaultInstance));
     }
 
-    public UpgradeSmithingRecipe(@NotNull ResourceLocation location, @NotNull EnchantmentType target, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
-        super(location, convertInput(target), upgrade, ItemStack.EMPTY);
-        this.target = target;
+    public UpgradeSmithingRecipe(@NotNull ResourceLocation location, @NotNull Ingredient upgrade, @NotNull Enchantment enchantment) {
+        super(location, convertInput(enchantment.category), upgrade, ItemStack.EMPTY);
         this.upgrade = upgrade;
         this.enchantment = enchantment;
     }
@@ -49,7 +45,7 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
     // Do not over max enchant level
     @Override
     public boolean matches(@NotNull IInventory inventory, @NotNull World world) {
-        return target.canEnchant(inventory.getItem(0).getItem())
+        return enchantment.category.canEnchant(inventory.getItem(0).getItem())
                 && upgrade.test(inventory.getItem(1))
                 && EnchantmentHelper.getItemEnchantmentLevel(enchantment, inventory.getItem(0)) < enchantment.getMaxLevel();
     }
@@ -80,32 +76,29 @@ public final class UpgradeSmithingRecipe extends SmithingRecipe {
         @NotNull
         @Override
         public UpgradeSmithingRecipe fromJson(@NotNull ResourceLocation location, @NotNull JsonObject json) {
-            EnchantmentType target = EnchantmentType.valueOf(JSONUtils.getAsString(json, "target"));
             Ingredient upgrade = Ingredient.fromJson(JSONUtils.getAsJsonObject(json, "upgrade"));
             ResourceLocation enchantmentId = new ResourceLocation(JSONUtils.getAsString(json, "enchantment"));
             if (!ForgeRegistries.ENCHANTMENTS.containsKey(enchantmentId)) {
                 throw new IllegalStateException("Could not found enchantment; " + enchantmentId);
             }
             Enchantment enchantment = ForgeRegistries.ENCHANTMENTS.getValue(enchantmentId);
-            return new UpgradeSmithingRecipe(location, target, upgrade, Objects.requireNonNull(enchantment));
+            return new UpgradeSmithingRecipe(location, upgrade, Objects.requireNonNull(enchantment));
         }
 
         @NotNull
         @Override
         public UpgradeSmithingRecipe fromNetwork(@NotNull ResourceLocation location, @NotNull PacketBuffer buf) {
-            EnchantmentType target = EnchantmentType.valueOf(buf.readUtf());
             Ingredient upgrade = Ingredient.fromNetwork(buf);
             ResourceLocation enchantmentLocation = new ResourceLocation(buf.readUtf());
             Enchantment enchantment = ForgeRegistries.ENCHANTMENTS.getValue(enchantmentLocation);
             if (enchantment == null) {
                 throw new IllegalStateException("Could not found enchantment; " + enchantmentLocation);
             }
-            return new UpgradeSmithingRecipe(location, target, upgrade, enchantment);
+            return new UpgradeSmithingRecipe(location, upgrade, enchantment);
         }
 
         @Override
         public void toNetwork(@NotNull PacketBuffer buf, @NotNull UpgradeSmithingRecipe recipe) {
-            buf.writeUtf(recipe.target.name());
             recipe.upgrade.toNetwork(buf);
             buf.writeUtf(Objects.requireNonNull(recipe.enchantment.getRegistryName()).toString());
         }
