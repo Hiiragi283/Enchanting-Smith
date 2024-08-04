@@ -7,7 +7,6 @@ import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
@@ -74,7 +73,7 @@ public record SmithingUpgradeRecipe(
     // Do not over max enchant level
     @Override
     public boolean testBase(ItemStack stack) {
-        return enchantment.target.isAcceptableItem(stack.getItem()) && EnchantmentHelper.getLevel(enchantment, stack) < enchantment.getMaxLevel();
+        return enchantment.isAcceptableItem(stack) && EnchantmentHelper.getLevel(enchantment, stack) < enchantment.getMaxLevel();
     }
 
     @Override
